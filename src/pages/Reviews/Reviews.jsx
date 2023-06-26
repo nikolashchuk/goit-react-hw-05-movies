@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
-import ReviewsMarkup from '../components/ReviewsMarkup';
-import { getReviews } from '../Services/serviceAPI';
+import ReviewsMarkup from '../../components/ReviewsMarkup/ReviewsMarkup';
+import { getReviews } from '../../Services/serviceAPI';
 
 export default function Reviews() {
   const [reviews, setReviews] = useState([]);

@@ -1,22 +1,24 @@
 import PropTypes from 'prop-types';
+import { Info, Wraper } from './MovieDetailsMarkupStyled';
 export default function MovieDetailsMarkup({ movie }) {
   return (
     movie && (
       <>
-        <div>
+        <Wraper>
           <img
             src={`https://image.tmdb.org/t/p/original${movie.poster_path}`}
             alt={movie.original_title}
-            height="300"
+            height="500"
+            width="350"
           />
-          <div>
+          <Info>
             <h2>
               {movie.original_title} ({movie.release_date.slice(0, 4)})
             </h2>
             <p>User score: {Math.round(movie.popularity)}%</p>
 
             <h2>Overview</h2>
-            <p>{movie.overviev}</p>
+            <p>{movie.overview}</p>
 
             <h2>Genres</h2>
             <p>
@@ -24,8 +26,8 @@ export default function MovieDetailsMarkup({ movie }) {
                 <li key={id}>{name}</li>
               ))}
             </p>
-          </div>
-        </div>
+          </Info>
+        </Wraper>
       </>
     )
   );

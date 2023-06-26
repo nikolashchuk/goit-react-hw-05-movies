@@ -7,8 +7,8 @@ import {
   useNavigate,
 } from 'react-router-dom';
 
-import { getDetailsById } from '../Services/serviceAPI';
-import MovieDetailsMarkup from 'components/MovieDetailsMarkup';
+import { getDetailsById } from '../../Services/serviceAPI';
+import MovieDetailsMarkup from 'components/MovieDetailsMarkup/MovieDetailsMarkup';
 
 export default function MovieDetails() {
   const [movie, setMovie] = useState(null);

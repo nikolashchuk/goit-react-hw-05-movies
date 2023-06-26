@@ -1,18 +1,20 @@
+import { Input, Label } from './SearchbarStyled';
+
 export default function Searchbar({ onSubmit }) {
   return (
     <form onSubmit={onSubmit}>
-      <label>
-        <input
+      <Label>
+        <Input
           type="text"
           autoComplete="off"
           autoFocus
           placeholder="Search movie"
           name="search"
         />
-      </label>
-      <button type="submit">
-        <span>🔍</span>
-      </button>
+        <button type="submit">
+          <span>🔍</span>
+        </button>
+      </Label>
     </form>
   );
 }

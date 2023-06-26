@@ -1,10 +1,11 @@
 import PropTypes from 'prop-types';
 import { Link, useLocation } from 'react-router-dom';
+import { FilmName, Films } from './ListStyled';
 
 export default function List({ movies }) {
   const location = useLocation();
   return (
-    <ul>
+    <Films>
       {movies &&
         movies.map(({ id, title, poster_path, original_title }) => (
           <li key={id}>
@@ -13,14 +14,14 @@ export default function List({ movies }) {
                 src={`https://image.tmdb.org/t/p/original${poster_path}`}
                 alt={original_title}
                 width=""
-                height="300"
+                height="400"
               />
 
-              <h3>{title}</h3>
+              <FilmName>{title}</FilmName>
             </Link>
           </li>
         ))}
-    </ul>
+    </Films>
   );
 }
 

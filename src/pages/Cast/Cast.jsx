@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { getActors } from '../Services/serviceAPI';
-import CastMarkup from 'components/CastMarkup';
+import { getActors } from '../../Services/serviceAPI';
+import CastMarkup from 'components/CastMarkup/CastMarkup';
 
 export default function Cast() {
   const [cast, setCast] = useState([]);

@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
-import { getMovieBySearch } from '../Services/serviceAPI';
-import Searchbar from 'components/Searchbar';
-import List from 'components/List';
+import { getMovieBySearch } from '../../Services/serviceAPI';
+import Searchbar from 'components/Searchbar/Searchbar';
+import List from 'components/List/List';
 
 export default function Movies() {
   const [movies, setMovies] = useState(null);

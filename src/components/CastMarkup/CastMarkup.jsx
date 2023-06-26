@@ -1,8 +1,9 @@
 import PropTypes from 'prop-types';
+import { CastList } from './CastMarkupStyled';
 
 export default function CastMarkup({ cast }) {
   return (
-    <ul>
+    <CastList>
       {cast &&
         cast.map(({ id, name, profile_path, character }) => (
           <li key={id}>
@@ -18,7 +19,7 @@ export default function CastMarkup({ cast }) {
             <p>Character: {character}</p>
           </li>
         ))}
-    </ul>
+    </CastList>
   );
 }
 
