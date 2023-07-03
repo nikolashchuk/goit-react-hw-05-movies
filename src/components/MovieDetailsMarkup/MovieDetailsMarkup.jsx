@@ -5,12 +5,14 @@ export default function MovieDetailsMarkup({ movie }) {
     movie && (
       <>
         <Wraper>
-          <img
-            src={`https://image.tmdb.org/t/p/original${movie.poster_path}`}
-            alt={movie.original_title}
-            height="500"
-            width="350"
-          />
+          <div>
+            <img
+              src={`https://image.tmdb.org/t/p/original${movie.poster_path}`}
+              alt={movie.original_title}
+              height="500"
+              width="350"
+            />
+          </div>
           <Info>
             <h2>
               {movie.original_title} ({movie.release_date.slice(0, 4)})
